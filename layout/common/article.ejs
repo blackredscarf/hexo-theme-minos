@@ -1,3 +1,8 @@
+<% if (post.cover){ %>
+<div class="article-cover">
+   <img class="article-cover-img" src="<%= post.cover %>"> 
+</div>
+<% } %>
 <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         <% if (index) { %>
@@ -8,23 +13,24 @@
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
         <span class="column is-narrow">
-            <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= format_date_full(post.date) %></time>
+            <%= moment(post.date).format('YYYY-MM-DD') %>
+            <!-- <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= format_date_full(post.date) %></time> -->
         </span>
         <% if (post.categories && post.categories.length){ %>
         <span class="column is-narrow article-category">
             <i class="far fa-folder"></i>
             <%- (post._categories || post.categories).map(category =>
                     `<a class="article-category-link" href="${url_for(category.path)}">${category.name}</a>`)
-                    .join('<span>></span>') %>
+                    .join('<span>,</span>') %>
         </span>
         <% } %>
-        <% if (!has_config('article.readtime') || get_config('article.readtime') === true) { %>
+        <!-- <% if (!has_config('article.readtime') || get_config('article.readtime') === true) { %>
         <span class="column is-narrow">
             <% let words = word_count(post._content); %>
             <% let time = duration((words / 150.0) * 60, 'seconds') %>
             <%= `${ time.humanize() } ${ __('article.read')} (${ __('article.about') } ${ words } ${ __('article.words') })` %>
         </span>
-        <% } %>
+        <% } %> -->
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     <% if (post.excerpt && index){ %>
