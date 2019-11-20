@@ -50,7 +50,7 @@
     </div>
     <% } %>
     <% if (!index && (post.prev || post.next)) { %>
-    <div class="columns is-mobile is-multiline article-nav">
+    <div class="go-next columns is-mobile is-multiline article-nav">
         <span class="column is-12-mobile is-half-desktop <%= !post.prev ? 'is-hidden-mobile' : '' %> article-nav-prev">
             <% if (post.prev){ %>
             <a href="<%- url_for(post.prev.path) %>"><%= post.prev.title %></a>

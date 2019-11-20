@@ -106,6 +106,10 @@ a.tag.article-tag {
     object-fit: cover;
 }
 
+.go-next {
+    margin-top: 30px;
+}
+
 @media screen and (max-width: 479px) {
     .article-cover {
         display: none;
@@ -113,9 +117,11 @@ a.tag.article-tag {
 }
 
 .article {
+
+    border-bottom: 1px solid $border-color;
+
     & + .article {
         padding-top: 2rem;
-        border-top: 1px solid $border-color;
     }
 
     .article-title a,
@@ -146,7 +152,7 @@ a.tag.article-tag {
     }
 
     .article-entry {
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
         h1, h2, h3, h4, h5, h6 {
             cursor: pointer;
             position: relative;
@@ -358,8 +364,8 @@ a.tag.article-tag {
 
 .comments {
     margin-top: 3rem;
-    padding-top: 3rem;
-    border-top: 1px solid $border-color;
+    padding-top: 1rem;
+    // border-top: 1px solid $border-color;
 
     & > .title {
         font-weight: 300;
