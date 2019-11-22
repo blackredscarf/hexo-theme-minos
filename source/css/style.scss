@@ -110,6 +110,11 @@ a.tag.article-tag {
     margin-top: 30px;
 }
 
+// comment style
+.v .vwrap .vheader .vinput {
+    border-bottom: 0px !important;
+}
+
 @media screen and (max-width: 479px) {
     .article-cover {
         display: none;
