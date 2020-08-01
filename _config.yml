@@ -1,5 +1,5 @@
 # Website's icon url.
-favicon: /favicon.png
+favicon: https://s1.ax1x.com/2020/07/25/aSC9Cn.png
 
 # Open Graph metadata (https://hexo.io/docs/helpers.html#open-graph)
 open_graph:
@@ -27,9 +27,9 @@ menu:
   归档: /archives
   操作系统: /categories/操作系统
   分布式: /categories/分布式
+  算法与设计:  /categories/算法与设计
   NLP: /categories/NLP
-  强化学习: /categories/强化学习
-  深度学习: /categories/深度学习
+  机器学习: /categories/机器学习
   # About: /about
 
 # Search plugin settings.
@@ -70,8 +70,8 @@ plugins:
 navbar_links:
   GitHub:
     icon: fab fa-github
-    url: https://github.com/blackredscarf/blackredscarf.github.io
+    url: https://github.com/blackredscarf
 
 # Links at the bottom of the page.
 footer_links:
-  GitHub: https://github.com/blackredscarf/blackredscarf.github.io
+  GitHub: https://github.com/blackredscarf
